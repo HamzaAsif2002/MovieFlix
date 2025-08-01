@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./assets/Pages/Home";
 import { About } from "./assets/Pages/About";
-import { Contact } from "./assets/Pages/Contact";
+import { Contact, contactData } from "./assets/Pages/Contact";
 import { AppOutlet } from "./Components/Outlet/AppOutlet";
 import { ErrorPage } from "./assets/Pages/ErrorPage";
 import { MoviesData } from "./Api/ApiData";
@@ -27,6 +27,7 @@ const App = () => {
         {
           path: "contact",
           element: <Contact />,
+          action: contactData,
         },
         {
           path: "movies",
