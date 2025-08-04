@@ -6,10 +6,10 @@ export const About = () => {
           About Hamza Flix
         </h1>
         <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          Hamza Flix is a modern movie exploration app built with React and
-          powered by the OMDB API. Our mission is to help users discover
-          top-rated films, explore genres, and get detailed movie information —
-          all in a clean and easy-to-use interface.
+          Hamza Flix is a modern movie app built with React and powered by the
+          OMDB API. Our mission is to help users discover top-rated films,
+          explore genres, and get detailed movie information — all in a clean
+          and easy-to-use interface.
         </p>
 
         <p className="text-gray-700 text-base leading-relaxed">
