@@ -1,17 +1,3 @@
-// export const MoviesData = async () => {
-//   try {
-//     const responce = await fetch(
-//       `https://www.omdbapi.com/?apikey=${
-//         import.meta.env.VITE_API_KEY
-//       }&s=titanic&page=1`
-//     );
-//     const result = responce.json();
-//     return result;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
 export const MoviesData = async ({ request }) => {
   const url = new URL(request.url);
   const searchQuery = url.searchParams.get("q") || "titanic";

@@ -1,9 +1,9 @@
-import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { Card } from "../../Card";
+import { InputField } from "../../inputField";
 
 export const Movies = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const moviesdata = useLoaderData();
 
   const handleSelectChange = (e) => {
@@ -14,7 +14,8 @@ export const Movies = () => {
 
   return (
     <>
-      <div className="mb-8 flex justify-center items-center">
+      <InputField />
+      <div className="m-5 flex justify-center items-center gap-2 ">
         <div className="relative">
           <select
             onChange={handleSelectChange}
@@ -46,9 +47,8 @@ export const Movies = () => {
           </div>
         </div>
       </div>
-
-      <div className="w-[80%] flex content-center items-center m-auto">
-        <ul className=" flex flex-wrap content-center items-center gap-6 mx-auto my-6">
+      <div className="w-[80%] flex  m-auto">
+        <ul className=" flex  flex-wrap content-center items-center gap-6  my-6">
           {moviesdata.Search.map((currMovie) => (
             <Card currMovie={currMovie} key={currMovie.imdbID} />
           ))}
